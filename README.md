@@ -26,16 +26,16 @@ node server.js
 Le fichier .env doit TOUJOURS être ajouté dans le fichier .gitignore afin de ne pas partager des données sensibles via un dépôt public (sur GitHub par exemple) !  
 --------------------------------------------------------------------------
 # .gitignore
-node_modules/
+node_modules/  
 .env  
 --------------------------------------------------------------------------
 Cependant, tu devrais mettre dans le dépôt un fichier appelé .env.sample avec des valeurs fictives, permettant aux contributeurs de savoir quels paramètres sont nécessaires pour que l'application fonctionne. Ils peuvent ensuite créer localement leur propre .env à partir de cet exemple.  
 
 # .env.sample file
-SERVER_PORT=5000
-DB_USER=YOUR_DB_USER
-DB_PASSWORD=YOUR_DB_PASSWORD
-SECRET_API_KEY=YOUR_SECRET_API_KEY
+SERVER_PORT=5000  
+DB_USER=YOUR_DB_USER  
+DB_PASSWORD=YOUR_DB_PASSWORD  
+SECRET_API_KEY=YOUR_SECRET_API_KEY  
 ---------------------------------------------------------------------------
 ☝️ Résumé
 Certaines variables de configuration dans une application web ne devraient pas être codées en dur. Elles devraient plutôt être lues à partir de l'environnement dans lequel l'application est exécutée. Cela permet de rendre l'application utilisable sur différentes machines (autres développeurs travaillant sur le projet, serveur de production, etc.) sans avoir à modifier le code source à chaque fois.
