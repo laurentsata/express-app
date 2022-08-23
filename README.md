@@ -26,14 +26,14 @@ npm install nodemon --save-dev
 Nous ne voulons pas que ce paquet soit installé et utilisé en production.
 --------------------------------------------------------------------------
 Étape 2: Adapte ton package.json, en modifiant "main" et "scripts" :
-++++++++++++++++++++++++++++
+-------------------------------------------------------------------------
 "main": "app.js",
 "scripts": {
   "start": "node app.js",
   "dev": "nodemon app.js",
   "test": "echo \"Error: no test specified\" && exit 1"
 },
-+++++++++++++++++++++++++++++
+----------------------------------------------------------------------------
 C'est une pratique courante de réserver le script start pour la prodution, et d'avoir un script dev pour le développement : ici, le script dev exécutera nodemon au lieu de node.
 -------------------------------------------------------------------------------
 Étape 3: Utilise npm run dev pour démarrer le serveur.
